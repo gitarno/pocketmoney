@@ -9,6 +9,13 @@
   <link rel="stylesheet" href="files/style.css">
 
 </head>
+<script>
+$(document).ready(function(){
+	$("#entrar").click(function(){
+		window.location = "token.html";
+	});
+});
+</script>
 <body>
   <div class="container background">
     <div class="btns">
@@ -25,7 +32,7 @@
       <br>
       <input type="password" name="password" placeholder="Senha">
       <br>
-      <button>Entrar</button>
+      <button id="entrar">Entrar</button>
 
     </div>
   </div>
