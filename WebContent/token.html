@@ -1,0 +1,96 @@
+
+<html><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Pocket Money</title>
+  <link rel="stylesheet" type="text/css" href="files/reset.css">
+  <link rel="stylesheet" type="text/css" href="files/site.css">
+
+  <link rel="stylesheet" type="text/css" href="files/container.css">
+  <link rel="stylesheet" type="text/css" href="files/grid.css">
+  <link rel="stylesheet" type="text/css" href="files/header.css">
+  <link rel="stylesheet" type="text/css" href="files/image.css">
+  <link rel="stylesheet" type="text/css" href="files/menu.css">
+
+  <link rel="stylesheet" type="text/css" href="files/divider.css">
+  <link rel="stylesheet" type="text/css" href="files/segment.css">
+  <link rel="stylesheet" type="text/css" href="files/form.css">
+  <link rel="stylesheet" type="text/css" href="files/input.css">
+  <link rel="stylesheet" type="text/css" href="files/button.css">
+  <link rel="stylesheet" type="text/css" href="files/list.css">
+  <link rel="stylesheet" type="text/css" href="files/message.css">
+  <link rel="stylesheet" type="text/css" href="files/icon.css">
+
+  <script src="files/jquery.min.js.download"></script>
+  <script src="files/form.js.download"></script>
+  <script src="files/transition.js.download"></script>
+  <link rel="stylesheet" href="files/style.css">
+  
+  <script src="files/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="files/sweetalert.css">
+  
+  
+<style type="text/css">
+body > .grid {
+  height: 50%;
+}
+</style>
+<script>
+$(document).ready(function(){
+	$("#btnvalidar").click(function(){
+	
+		if($("#valor").val() === "" || $("#token").val() === ""){
+			swal("Todos os campos são obrigatórios");
+			return;
+		}
+
+		$(this).addClass("loading");
+		
+		setTimeout(function(){
+		  $("#btnvalidar").removeClass("loading");
+		  swal("Transação realizada!", "Recebido o valor de R$ " + $("#valor").val(), "success")
+		}, 1000);
+		
+		
+	});
+	
+	$("#logout").click(function(){
+		window.location = "login.html";
+	});
+});
+</script>
+</head>
+<body>
+<div class="ui menu">
+  <div class="right menu">
+	<a class="item" id="logout">
+		<i class="power icon"></i>
+	</a>
+  </div>
+</div>
+<div class="ui middle aligned center aligned grid conteudo">
+  <div class="column">
+   <span class="title">Informe valor e token</span>
+	<form class="ui large form" action="teste.html" style="padding-top: 10px;">
+      <div class="ui stacked">
+        <div class="field">
+          <div class="ui left input">
+            <input type="number" name="valor" id="valor" placeholder="Valor">
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui left input">
+            <input type="text" name="token" id="token" placeholder="Token">
+          </div>
+        </div>
+        <div class="ui fluid large gray submit button" id="btnvalidar">Enviar</div>
+      </div>
+
+      <div class="ui error message"></div>
+    </form>
+  </div>
+</div>
+</body>
+</html>
