@@ -5,105 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <title>Pocket Money</title>
-  <link rel="stylesheet" type="text/css" href="files/reset.css">
-  <link rel="stylesheet" type="text/css" href="files/site.css">
-
-  <link rel="stylesheet" type="text/css" href="files/container.css">
-  <link rel="stylesheet" type="text/css" href="files/grid.css">
-  <link rel="stylesheet" type="text/css" href="files/header.css">
-  <link rel="stylesheet" type="text/css" href="files/image.css">
-  <link rel="stylesheet" type="text/css" href="files/menu.css">
-
-  <link rel="stylesheet" type="text/css" href="files/divider.css">
-  <link rel="stylesheet" type="text/css" href="files/segment.css">
-  <link rel="stylesheet" type="text/css" href="files/form.css">
-  <link rel="stylesheet" type="text/css" href="files/input.css">
-  <link rel="stylesheet" type="text/css" href="files/button.css">
-  <link rel="stylesheet" type="text/css" href="files/list.css">
-  <link rel="stylesheet" type="text/css" href="files/message.css">
-  <link rel="stylesheet" type="text/css" href="files/icon.css">
-
-  <script src="files/jquery.min.js.download"></script>
-  <script src="files/form.js.download"></script>
-  <script src="files/transition.js.download"></script>
+  <script src="files/jquery-3.1.1.min.js"></script>
   <link rel="stylesheet" href="files/style.css">
-  
-  
-  <style type="text/css">
-    body > .grid {
-      height: 100%;
-    }
-    .image {
-      margin-top: -100px;
-    }
-    .column {
-      max-width: 450px;
-    }
-  </style>
-  <script>
-  $(document)
-    .ready(function() {
-      $('.ui.form')
-        .form({
-          fields: {
-            email: {
-              identifier  : 'email',
-              rules: [
-                {
-                  type   : 'empty',
-                  prompt : 'Insira o e-mail'
-                },
-                {
-                  type   : 'email',
-                  prompt : 'Insira um e-mail válido'
-                }
-              ]
-            },
-            password: {
-              identifier  : 'password',
-              rules: [
-                {
-                  type   : 'empty',
-                  prompt : 'Insira a senha'
-                }
-              ]
-            }
-          }
-        })
-    });
-</script>
+
 </head>
+<script>
+$(document).ready(function(){
+	$("#entrar").click(function(){
+		window.location = "token.html";
+	});
+});
+</script>
 <body>
+  <div class="container background">
+    <div class="btns">
 
-<div class="ui middle aligned center aligned grid">
-  <div class="column">
-    <h2 class="ui red image header">
-      <img src="files/logo.png" class="image">
-      <div class="content">
-        Estabelecimento<small> (Pocket Money)</small>
-      </div>
-    </h2>
-    <form class="ui large form" action="teste.html">
-      <div class="ui stacked segment">
-        <div class="field">
-          <div class="ui left icon input">
-            <i class="user icon"></i>
-            <input type="text" name="email" placeholder="E-mail address">
-          </div>
-        </div>
-        <div class="field">
-          <div class="ui left icon input">
-            <i class="lock icon"></i>
-            <input type="password" name="password" placeholder="Password">
-          </div>
-        </div>
-        <div class="ui fluid large red submit button">Login</div>
-      </div>
+	  <img src="logo.png" /><br>
+      <span class="subtclass="subtitle"le">Estabelecimento</span>
+	 
+      <br><br><br>
+      <br><br>
+      <br><br><br>
+      <br><br><br>
+      
+      <input type="text" name="email" placeholder="Usuário">
+      <br>
+      <input type="password" name="password" placeholder="Senha">
+      <br>
+      <button id="entrar">Entrar</button>
 
-      <div class="ui error message"></div>
-    </form>
-
+    </div>
   </div>
-</div>
 
 </body></html>
